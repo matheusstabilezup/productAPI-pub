@@ -1,5 +1,12 @@
 micronaut:
   application:
     name: productAPIPub
+  server:
+    port: 8081
+    cors:
+      enabled: true
+endpoints:
+  health:
+    enabled: true
 nats.addresses:
 - nats://localhost:4222
