@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: productAPIPub
+nats.addresses:
+- nats://localhost:4222
