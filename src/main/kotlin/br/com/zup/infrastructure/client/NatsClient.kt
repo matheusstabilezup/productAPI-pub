@@ -6,7 +6,6 @@ import io.micronaut.nats.annotation.Subject
 import javax.inject.Singleton
 
 @NatsClient
-@Singleton
 interface NatsClient {
     @Subject("products")
     fun send(eventsInformation: EventsInformation)
