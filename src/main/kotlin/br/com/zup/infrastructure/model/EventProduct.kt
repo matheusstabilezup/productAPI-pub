@@ -3,7 +3,7 @@ package br.com.zup.infrastructure.model
 import java.math.BigDecimal
 import java.util.UUID
 
-data class ProductEvent(
+data class EventProduct(
     var id: UUID? = null,
     val name: String = "",
     val category: String = "",

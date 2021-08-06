@@ -1,5 +1,6 @@
 package br.com.zup.infrastructure.model
 
-enum class Event(val event: String) {
-    SAVE_PRODUCT("SAVE_PRODUCT")
-}
+data class Event(
+    val eventType: EventType = EventType.SAVE_PRODUCT,
+    val eventProduct: EventProduct = EventProduct()
+)

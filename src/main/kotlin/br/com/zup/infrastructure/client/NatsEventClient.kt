@@ -1,12 +1,11 @@
 package br.com.zup.infrastructure.client
 
-import br.com.zup.infrastructure.model.EventsInformation
+import br.com.zup.infrastructure.model.Event
 import io.micronaut.nats.annotation.NatsClient
 import io.micronaut.nats.annotation.Subject
-import javax.inject.Singleton
 
 @NatsClient
-interface NatsClient {
+interface NatsEventClient : EventClient {
     @Subject("products")
-    fun send(eventsInformation: EventsInformation)
+    override fun send(event: Event)
 }
